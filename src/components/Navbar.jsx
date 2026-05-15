@@ -50,14 +50,11 @@ function Navbar() {
                   onClick={() => setDropdownOpen(false)}
                 ></div>
                 <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50">
-                  <Link to="/dashboard" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
-                    <LayoutDashboard size={16} /> Dashboard
-                  </Link>
                   <Link to="/profile" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
                     <User size={16} /> Profile
                   </Link>
-                  <Link to="/stats" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
-                    <BarChart3 size={16} /> My Stats
+                  <Link to="/leaderboard" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
+                    <Trophy size={16} /> Leaderboard
                   </Link>
                   <Link to="/history" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
                     <HistoryIcon size={16} /> My Issues

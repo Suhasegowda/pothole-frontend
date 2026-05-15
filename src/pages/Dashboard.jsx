@@ -109,6 +109,11 @@ function Dashboard() {
 
   const handleSubmit = () => {
     alert('Issue uploaded successfully! Points added to your profile.');
+    
+    // Increment reported issues count
+    const currentCount = parseInt(localStorage.getItem('issuesCount') || '0', 10);
+    localStorage.setItem('issuesCount', (currentCount + 1).toString());
+    
     setFile(null);
     setPreview(null);
     setCategory('');

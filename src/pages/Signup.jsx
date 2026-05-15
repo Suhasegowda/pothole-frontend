@@ -9,7 +9,13 @@ function Signup() {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    localStorage.setItem('civiclens_user', JSON.stringify({ name, email, password }));
+    localStorage.setItem('civiclens_user', JSON.stringify({ 
+      name, 
+      email, 
+      password,
+      memberSince: Date.now() 
+    }));
+    localStorage.setItem('issuesCount', '0');
     alert('Account created successfully! Please login.');
     navigate('/login');
   };
