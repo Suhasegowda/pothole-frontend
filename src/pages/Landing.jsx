@@ -75,15 +75,15 @@ function Landing() {
           <div className="w-full h-[400px] bg-gray-100 rounded-xl overflow-hidden shadow-lg border border-gray-200 relative">
             <Map
               initialViewState={{
-                longitude: 72.8311,
-                latitude: 21.1702,
+                longitude: 77.5946,
+                latitude: 12.9716,
                 zoom: 11
               }}
               mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
             >
-              <Marker longitude={72.83} latitude={21.17} color="#15803d" />
-              <Marker longitude={72.85} latitude={21.19} color="#15803d" />
-              <Marker longitude={72.80} latitude={21.15} color="#ef4444" />
+              <Marker longitude={77.59} latitude={12.97} color="#15803d" />
+              <Marker longitude={77.62} latitude={12.93} color="#15803d" />
+              <Marker longitude={77.58} latitude={13.00} color="#ef4444" />
             </Map>
           </div>
         </div>
