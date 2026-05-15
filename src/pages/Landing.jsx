@@ -153,7 +153,7 @@ function Landing() {
               <div className="md:w-1/2 relative group">
                 <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">3</div>
                 <div className="bg-cyan-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
-                   <img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clean street illustration" className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
+                   <img src="/road-repair.png" alt="Worker fixing pothole" className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </div>
             </div>
