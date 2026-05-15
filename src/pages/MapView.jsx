@@ -205,7 +205,7 @@ function MapView() {
             </button>
           </div>
           
-          <Link to="/dashboard" className="w-full bg-green-600 text-white py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-green-700 transition mt-2 shadow-sm">
+          <Link to="/dashboard" className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition mt-2 shadow-sm">
             <span className="text-lg leading-none">+</span> Report New Issue
           </Link>
         </div>
@@ -232,7 +232,7 @@ function MapView() {
           <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Pending</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-green-600 leading-none mb-1">{stats.resolved}</div>
+          <div className="text-2xl font-bold text-blue-600 leading-none mb-1">{stats.resolved}</div>
           <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Resolved</div>
         </div>
       </div>

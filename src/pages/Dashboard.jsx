@@ -165,7 +165,7 @@ function Dashboard() {
                       </button>
                       <button 
                         onClick={capturePhoto}
-                        className="px-8 py-3 bg-white text-green-700 rounded-full font-bold hover:bg-slate-100 transition shadow-[0_0_20px_rgba(255,255,255,0.4)] flex items-center gap-2"
+                        className="px-8 py-3 bg-white text-blue-700 rounded-full font-bold hover:bg-slate-100 transition shadow-[0_0_20px_rgba(255,255,255,0.4)] flex items-center gap-2"
                       >
                         <Camera size={20} /> Snap
                       </button>
@@ -178,9 +178,9 @@ function Dashboard() {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <button 
                   onClick={startCamera}
-                  className="flex flex-col items-center justify-center p-8 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl hover:bg-green-50 hover:border-green-300 transition-colors group"
+                  className="flex flex-col items-center justify-center p-8 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition-colors group"
                 >
-                  <div className="p-3 bg-white rounded-full shadow-sm text-green-600 group-hover:scale-110 transition-transform mb-3">
+                  <div className="p-3 bg-white rounded-full shadow-sm text-blue-600 group-hover:scale-110 transition-transform mb-3">
                     <Camera size={28} />
                   </div>
                   <span className="font-semibold text-slate-700">Take Photo</span>
@@ -220,7 +220,7 @@ function Dashboard() {
               <select 
                 value={category} 
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-300 text-slate-800 px-4 py-3 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                className="w-full bg-slate-50 border border-slate-300 text-slate-800 px-4 py-3 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
               >
                 <option value="" disabled>Choose the type of issue...</option>
                 <option value="pothole">Pothole</option>
@@ -238,7 +238,7 @@ function Dashboard() {
                   value={otherDescription} 
                   onChange={(e) => setOtherDescription(e.target.value)}
                   placeholder="Please describe what the issue is..."
-                  className="w-full bg-slate-50 border border-slate-300 text-slate-800 px-4 py-3 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                  className="w-full bg-slate-50 border border-slate-300 text-slate-800 px-4 py-3 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                 />
               </div>
             )}
@@ -265,11 +265,11 @@ function Dashboard() {
             {scanResult && (
               <div className="mt-6 animate-fade-in">
                 <div className={`p-5 rounded-xl border mb-6 ${
-                  scanResult.status === 'success' ? 'bg-green-50 border-green-200' : 'bg-amber-50 border-amber-200'
+                  scanResult.status === 'success' ? 'bg-blue-50 border-blue-200' : 'bg-amber-50 border-amber-200'
                 }`}>
                   <div className="flex items-center gap-3 mb-2">
-                    {scanResult.status === 'success' ? <CheckCircle className="text-green-600" /> : <AlertTriangle className="text-amber-500" />}
-                    <h4 className={`font-bold text-lg ${scanResult.status === 'success' ? 'text-green-800' : 'text-amber-800'}`}>
+                    {scanResult.status === 'success' ? <CheckCircle className="text-blue-600" /> : <AlertTriangle className="text-amber-500" />}
+                    <h4 className={`font-bold text-lg ${scanResult.status === 'success' ? 'text-blue-800' : 'text-amber-800'}`}>
                       {scanResult.status === 'success' ? 'Validation Passed' : 'Duplicate Found'}
                     </h4>
                   </div>
@@ -277,13 +277,13 @@ function Dashboard() {
                     {scanResult.message}
                   </p>
                   <p className="text-xs font-semibold text-slate-500">
-                    AI Confidence: <span className={scanResult.status === 'success' ? 'text-green-700' : 'text-amber-700'}>{scanResult.confidence}%</span>
+                    AI Confidence: <span className={scanResult.status === 'success' ? 'text-blue-700' : 'text-amber-700'}>{scanResult.confidence}%</span>
                   </p>
                 </div>
 
                 <button 
                   onClick={handleSubmit}
-                  className="w-full py-4 rounded-xl font-bold text-lg text-white bg-green-600 hover:bg-green-700 shadow-md flex items-center justify-center gap-2 transition"
+                  className="w-full py-4 rounded-xl font-bold text-lg text-white bg-blue-600 hover:bg-blue-700 shadow-md flex items-center justify-center gap-2 transition"
                 >
                   <Upload size={20} /> Ok, Upload Report
                 </button>
@@ -295,7 +295,7 @@ function Dashboard() {
         <div className="space-y-6">
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
             <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
-              <MapPin size={20} className="text-green-600" /> Live Map
+              <MapPin size={20} className="text-blue-600" /> Live Map
             </h3>
             <div className="h-64 rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
               <Map
@@ -322,9 +322,9 @@ function Dashboard() {
                 <span className="text-slate-500 font-medium text-sm">Reports Today</span>
                 <span className="text-2xl font-bold text-slate-800">142</span>
               </div>
-              <div className="bg-green-50 p-4 rounded-xl border border-green-100 flex justify-between items-center">
-                <span className="text-green-700 font-medium text-sm">Resolved Issues</span>
-                <span className="text-2xl font-bold text-green-700">89</span>
+              <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 flex justify-between items-center">
+                <span className="text-blue-700 font-medium text-sm">Resolved Issues</span>
+                <span className="text-2xl font-bold text-blue-700">89</span>
               </div>
               <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 flex justify-between items-center">
                 <span className="text-blue-700 font-medium text-sm">Your Points</span>

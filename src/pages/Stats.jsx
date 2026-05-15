@@ -118,7 +118,7 @@ function Stats() {
           <Link to="/leaderboard" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
             <Trophy size={16} /> View Leaderboard
           </Link>
-          <Link to="/dashboard" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
+          <Link to="/dashboard" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
             <span className="text-lg leading-none">+</span> Report New Issue
           </Link>
         </div>
