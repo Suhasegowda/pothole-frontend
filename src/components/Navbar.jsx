@@ -11,16 +11,15 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 flex items-center px-6 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 h-20 bg-white border-b border-slate-200 z-50 flex items-center px-6 shadow-sm">
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="/logo_transparent.png" 
             alt="CivicLens AI Logo" 
-            className="h-10 object-contain" 
+            className="h-16 w-auto object-contain" 
             onError={(e) => { e.target.style.display = 'none'; }}
           />
-          <span className="font-bold text-xl text-slate-800">CivicLens</span>
         </Link>
         <div className="flex items-center gap-2">
           <Link to="/map" className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition ${isActive('/map')}`}>
