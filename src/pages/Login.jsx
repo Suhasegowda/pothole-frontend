@@ -46,7 +46,7 @@ function Login() {
             <img
               src="/logo_transparent.png"
               alt="CivicLens AI"
-              className="h-32 object-contain mx-auto"
+              className="h-56 object-contain mx-auto"
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </div>
