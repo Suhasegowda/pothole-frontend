@@ -1,16 +1,37 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate('/dashboard');
+    setError('');
+
+    const savedUser = localStorage.getItem('civiclens_user');
+    
+    if (savedUser) {
+      const parsedUser = JSON.parse(savedUser);
+      if (parsedUser.email === email && parsedUser.password === password) {
+        navigate('/dashboard');
+      } else {
+        setError('Incorrect email or password.');
+      }
+    } else {
+      setError('No account found. Please Create an Account first.');
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-5 relative z-10">
-      <div className="glass w-full max-w-6xl rounded-3xl overflow-hidden grid md:grid-cols-2">
+    <div className="min-h-screen flex items-center justify-center px-5 relative z-10 bg-slate-900 text-white overflow-hidden">
+      <div className="bg-animation"></div>
+      <div className="circle circle1"></div>
+      <div className="circle circle2"></div>
+      <div className="circle circle3"></div>
+      <div className="glass w-full max-w-6xl rounded-3xl overflow-hidden grid md:grid-cols-2 relative z-10">
         {/* Left Side */}
         <div className="hidden md:flex flex-col justify-center items-center text-white p-14 relative">
           <h1 className="text-5xl font-bold mb-6 leading-tight">
@@ -21,11 +42,14 @@ function Login() {
             animations and glassmorphism effects.
           </p>
           {/* Illustration */}
-          <img
-            src="/logo.jpg"
-            alt="CivicLens AI"
-            className="w-72 mt-10 animate-bounce"
-          />
+          <div className="bg-white p-2 rounded-2xl shadow-xl mt-10 animate-bounce">
+            <img
+              src="/logo.jpeg"
+              alt="CivicLens AI"
+              className="w-64 rounded-xl"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </div>
         </div>
 
         {/* Right Side */}
@@ -41,6 +65,12 @@ function Login() {
 
           {/* Form */}
           <form onSubmit={handleLogin}>
+            {error && (
+              <div className="mb-4 p-3 bg-red-50 text-red-600 rounded-lg text-sm border border-red-200">
+                {error}
+              </div>
+            )}
+            
             {/* Email */}
             <div className="mb-6">
               <label className="block text-gray-700 font-semibold mb-2">
@@ -49,6 +79,8 @@ function Login() {
               <input
                 type="email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="input-box w-full px-5 py-4 rounded-xl border border-gray-300 outline-none text-slate-800 bg-white"
               />
@@ -62,6 +94,8 @@ function Login() {
               <input
                 type="password"
                 required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
                 className="input-box w-full px-5 py-4 rounded-xl border border-gray-300 outline-none text-slate-800 bg-white"
               />

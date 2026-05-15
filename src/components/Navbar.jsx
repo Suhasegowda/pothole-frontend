@@ -1,40 +1,75 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Camera, Map, Trophy, History as HistoryIcon, LogOut } from 'lucide-react';
+import { Camera, Map, Trophy, History as HistoryIcon, LogOut, User, LayoutDashboard, BarChart3, ChevronDown } from 'lucide-react';
 
 function Navbar() {
   const location = useLocation();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const isActive = (path) => {
-    return location.pathname === path ? 'active' : '';
+    return location.pathname === path ? 'text-green-600 bg-green-50' : 'text-slate-600 hover:text-green-600 hover:bg-slate-50';
   };
 
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className="logo">
-          <img src="/logo.jpg" alt="CivicLens AI Logo" style={{ height: '40px', objectFit: 'contain' }} />
-        </div>
-        <div className="nav-links">
-          <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Map size={18} /> Map & Report
-            </div>
+    <nav className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 flex items-center px-6 shadow-sm">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
+        <Link to="/" className="flex items-center gap-2">
+          <img 
+            src="/logo.jpeg" 
+            alt="CivicLens AI Logo" 
+            className="h-8 object-contain rounded" 
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+          <span className="font-bold text-xl text-green-800">CivicIssue</span>
+        </Link>
+        <div className="flex items-center gap-2">
+          <Link to="/map" className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition ${isActive('/map')}`}>
+            <Map size={18} /> Map View
           </Link>
-          <Link to="/leaderboard" className={`nav-link ${isActive('/leaderboard')}`}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Trophy size={18} /> Leaderboard
-            </div>
+          <Link to="/dashboard" className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-white bg-green-600 hover:bg-green-700 transition">
+            <Camera size={18} /> Report Issue
           </Link>
-          <Link to="/history" className={`nav-link ${isActive('/history')}`}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <HistoryIcon size={18} /> History
-            </div>
-          </Link>
-          <Link to="/login" className="nav-link" style={{ marginLeft: '16px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <LogOut size={18} /> Logout
-            </div>
-          </Link>
+
+          {/* User Profile Dropdown */}
+          <div className="relative ml-4">
+            <button 
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-green-200 hover:bg-slate-50 transition"
+            >
+              <div className="w-6 h-6 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xs">
+                S
+              </div>
+              <span className="text-sm font-bold text-slate-700">suhasgowda</span>
+              <ChevronDown size={14} className="text-slate-500" />
+            </button>
+
+            {dropdownOpen && (
+              <>
+                <div 
+                  className="fixed inset-0 z-40"
+                  onClick={() => setDropdownOpen(false)}
+                ></div>
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50">
+                  <Link to="/dashboard" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
+                    <LayoutDashboard size={16} /> Dashboard
+                  </Link>
+                  <Link to="/profile" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
+                    <User size={16} /> Profile
+                  </Link>
+                  <Link to="/stats" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
+                    <BarChart3 size={16} /> My Stats
+                  </Link>
+                  <Link to="/history" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-green-600 transition">
+                    <HistoryIcon size={16} /> My Issues
+                  </Link>
+                  <div className="h-px bg-slate-100 my-2"></div>
+                  <Link to="/login" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition">
+                    <LogOut size={16} /> Logout
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>

@@ -12,52 +12,55 @@ function Leaderboard() {
 
   const getRankIcon = (rank) => {
     switch(rank) {
-      case 1: return <Trophy size={24} color="#fbbf24" />;
-      case 2: return <Medal size={24} color="#9ca3af" />;
-      case 3: return <Award size={24} color="#b45309" />;
-      default: return <span style={{ fontWeight: 'bold', fontSize: '18px', color: 'var(--text-secondary)', width: '24px', textAlign: 'center' }}>{rank}</span>;
+      case 1: return <Trophy size={28} className="text-amber-400 drop-shadow-md" />;
+      case 2: return <Medal size={28} className="text-slate-400 drop-shadow-md" />;
+      case 3: return <Award size={28} className="text-amber-700 drop-shadow-md" />;
+      default: return <span className="font-bold text-xl text-slate-400 w-[28px] inline-block text-center">{rank}</span>;
     }
   };
 
   return (
-    <div className="container animate-fade-in">
-      <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-        <Trophy size={64} color="var(--accent-primary)" style={{ marginBottom: '16px' }} />
-        <h1 style={{ fontSize: '36px', marginBottom: '8px' }}>City Champions</h1>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+    <div className="max-w-4xl mx-auto py-12">
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+          <Trophy size={40} className="text-green-600" />
+        </div>
+        <h1 className="text-4xl font-bold text-slate-800 mb-4">City Champions</h1>
+        <p className="text-slate-500 max-w-xl mx-auto text-lg">
           Meet the top contributors making Bengaluru a better place. Earn points by reporting valid issues and climbing the ranks!
         </p>
       </div>
 
-      <div className="glass-panel" style={{ maxWidth: '800px', margin: '0 auto', overflow: 'hidden' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '60px 1fr 100px 100px', padding: '16px 24px', background: 'rgba(0,0,0,0.4)', borderBottom: '1px solid var(--border-glass)', fontWeight: 'bold', color: 'var(--text-secondary)' }}>
+      <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+        <div className="grid grid-cols-[80px_1fr_120px_120px] px-8 py-5 bg-slate-50 border-b border-slate-200 font-bold text-slate-500 text-sm uppercase tracking-wider">
           <div>Rank</div>
           <div>Citizen</div>
-          <div style={{ textAlign: 'right' }}>Reports</div>
-          <div style={{ textAlign: 'right' }}>Points</div>
+          <div className="text-right">Reports</div>
+          <div className="text-right">Points</div>
         </div>
         
-        {users.map((user) => (
-          <div 
-            key={user.rank} 
-            style={{ 
-              display: 'grid', 
-              gridTemplateColumns: '60px 1fr 100px 100px', 
-              padding: '20px 24px', 
-              alignItems: 'center',
-              borderBottom: '1px solid var(--border-glass)',
-              background: user.name === 'You' ? 'rgba(99, 102, 241, 0.1)' : 'transparent',
-              transition: 'background 0.3s ease'
-            }}
-          >
-            <div>{getRankIcon(user.rank)}</div>
-            <div style={{ fontWeight: '600', fontSize: '18px', color: user.name === 'You' ? 'var(--accent-primary)' : 'white' }}>
-              {user.name}
+        <div className="divide-y divide-slate-100">
+          {users.map((user) => (
+            <div 
+              key={user.rank} 
+              className={`grid grid-cols-[80px_1fr_120px_120px] px-8 py-6 items-center transition-colors hover:bg-slate-50 ${
+                user.name === 'You' ? 'bg-green-50/50 relative overflow-hidden' : ''
+              }`}
+            >
+              {user.name === 'You' && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500"></div>
+              )}
+              <div className="flex items-center justify-center w-8">
+                {getRankIcon(user.rank)}
+              </div>
+              <div className={`font-bold text-xl ${user.name === 'You' ? 'text-green-700' : 'text-slate-800'}`}>
+                {user.name}
+              </div>
+              <div className="text-right text-slate-500 font-medium">{user.reports}</div>
+              <div className="text-right font-bold text-blue-600 text-xl">{user.points}</div>
             </div>
-            <div style={{ textAlign: 'right', color: 'var(--text-secondary)' }}>{user.reports}</div>
-            <div style={{ textAlign: 'right', fontWeight: 'bold', color: 'var(--warning)', fontSize: '18px' }}>{user.points}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

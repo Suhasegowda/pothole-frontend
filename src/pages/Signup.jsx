@@ -1,18 +1,36 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Signup() {
   const navigate = useNavigate();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSignup = (e) => {
     e.preventDefault();
+    localStorage.setItem('civiclens_user', JSON.stringify({ name, email, password }));
+    alert('Account created successfully! Please login.');
     navigate('/login');
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-5 relative z-10">
-      <div className="glass w-full max-w-md rounded-3xl p-10 text-white">
+    <div className="min-h-screen flex items-center justify-center px-5 relative z-10 bg-slate-900 text-white overflow-hidden">
+      <div className="bg-animation"></div>
+      <div className="circle circle1"></div>
+      <div className="circle circle2"></div>
+      <div className="circle circle3"></div>
+      <div className="glass w-full max-w-md rounded-3xl p-10 text-white relative z-10">
         {/* Heading */}
         <div className="text-center mb-8">
+          <div className="bg-white p-2 rounded-xl inline-block mb-4 shadow-xl">
+            <img 
+              src="/logo.jpeg" 
+              alt="Logo" 
+              className="h-12 rounded-lg" 
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </div>
           <h1 className="text-4xl font-bold mb-3">
             Create Account
           </h1>
@@ -31,6 +49,8 @@ function Signup() {
             <input
               type="text"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Enter your name"
               className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
             />
@@ -44,6 +64,8 @@ function Signup() {
             <input
               type="email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
             />
@@ -57,6 +79,8 @@ function Signup() {
             <input
               type="password"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Create password"
               className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
             />
@@ -65,7 +89,7 @@ function Signup() {
           {/* Signup Button */}
           <button
             type="submit"
-            className="signup-btn w-full bg-gradient-to-r from-blue-600 to-cyan-500 py-4 rounded-xl font-bold text-lg border-0 text-white"
+            className="signup-btn w-full bg-gradient-to-r from-blue-600 to-cyan-500 py-4 rounded-xl font-bold text-lg border-0 text-white cursor-pointer"
           >
             Create Account
           </button>
