@@ -90,7 +90,7 @@ function Profile() {
       {/* Floating Profile Card */}
       <div className="max-w-3xl mx-auto px-4 -mt-20">
         <div className="bg-white rounded-xl shadow-md p-8 text-center border border-slate-100 mb-8 relative">
-          <div className="w-24 h-24 bg-blue-600 text-white rounded-full flex items-center justify-center text-4xl font-bold mx-auto border-4 border-white shadow-lg -mt-16 mb-4 overflow-hidden relative group">
+          <div className="w-24 h-24 bg-cyan-500 text-white rounded-full flex items-center justify-center text-4xl font-bold mx-auto border-4 border-white shadow-lg -mt-16 mb-4 overflow-hidden relative group">
             {userData.avatar ? (
               <img src={userData.avatar} alt="Profile" className="w-full h-full object-cover" />
             ) : (
@@ -112,11 +112,11 @@ function Profile() {
           
           <div className="flex justify-center gap-12 text-sm">
             <div className="text-center">
-              <div className="text-xl font-bold text-blue-600">{issuesReported}</div>
+              <div className="text-xl font-bold text-cyan-500">{issuesReported}</div>
               <div className="text-slate-500 font-medium text-[11px] uppercase tracking-wider">Issues Reported</div>
             </div>
             <div className="text-center">
-              <div className="text-xl font-bold text-blue-600">{calculateMemberSince(userData.memberSince)}</div>
+              <div className="text-xl font-bold text-cyan-500">{calculateMemberSince(userData.memberSince)}</div>
               <div className="text-slate-500 font-medium text-[11px] uppercase tracking-wider">Member Since</div>
             </div>
           </div>
@@ -131,7 +131,7 @@ function Profile() {
             {!isEditing ? (
               <button 
                 onClick={() => setIsEditing(true)}
-                className="flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition"
+                className="flex items-center gap-2 text-sm font-bold text-cyan-500 bg-cyan-50 px-4 py-2 rounded-lg hover:bg-cyan-100 transition"
               >
                 <Edit2 size={16} /> Edit Profile
               </button>
@@ -184,12 +184,12 @@ function Profile() {
                 onChange={handleFileChange}
                 className="hidden" 
               />
-              <div className={`flex items-center gap-3 border rounded-lg px-4 py-2 ${isEditing ? 'border-blue-300 bg-blue-50/30' : 'border-slate-200 bg-slate-50'}`}>
+              <div className={`flex items-center gap-3 border rounded-lg px-4 py-2 ${isEditing ? 'border-blue-300 bg-cyan-50/30' : 'border-slate-200 bg-slate-50'}`}>
                 <button 
                   type="button" 
                   disabled={!isEditing}
                   onClick={() => fileInputRef.current?.click()}
-                  className={`px-4 py-1.5 border rounded text-sm font-medium shadow-sm flex items-center gap-2 ${isEditing ? 'bg-white border-blue-200 text-blue-700 hover:bg-blue-50' : 'bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed'}`}
+                  className={`px-4 py-1.5 border rounded text-sm font-medium shadow-sm flex items-center gap-2 ${isEditing ? 'bg-white border-blue-200 text-cyan-500 hover:bg-cyan-50' : 'bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed'}`}
                 >
                   <Upload size={16} /> Choose File
                 </button>
@@ -210,7 +210,7 @@ function Profile() {
                 </button>
                 <button 
                   type="submit" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg text-sm font-bold shadow-sm transition flex items-center justify-center gap-2 flex-1 md:flex-none"
+                  className="bg-cyan-500 hover:bg-cyan-500 text-white px-8 py-2.5 rounded-lg text-sm font-bold shadow-sm transition flex items-center justify-center gap-2 flex-1 md:flex-none"
                 >
                   <Save size={18} /> Save Changes
                 </button>

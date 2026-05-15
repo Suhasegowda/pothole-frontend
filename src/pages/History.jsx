@@ -54,7 +54,7 @@ function History() {
                 <div className="flex items-center gap-3 mb-2">
                   <h3 className="text-xl font-bold text-slate-800 m-0">{report.type}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                    report.status === 'resolved' ? 'bg-blue-100 text-blue-700' : 'bg-red-50 text-red-600'
+                    report.status === 'resolved' ? 'bg-cyan-100 text-cyan-500' : 'bg-red-50 text-red-600'
                   }`}>
                     {report.status === 'resolved' ? 'Resolved' : 'Pending'}
                   </span>
@@ -65,17 +65,17 @@ function History() {
                 <div className="text-slate-500 text-sm flex items-center gap-2 mb-3">
                   <Clock size={16} /> Reported on {report.date}
                 </div>
-                <div className="font-bold text-blue-600 text-sm bg-blue-50 px-3 py-1.5 rounded-lg inline-block w-max">
+                <div className="font-bold text-cyan-500 text-sm bg-cyan-50 px-3 py-1.5 rounded-lg inline-block w-max">
                   +{report.points} Points Earned
                 </div>
               </div>
             </div>
 
             {report.status === 'resolved' && report.resolvedImage && (
-              <div className="flex gap-4 items-center bg-blue-50 p-4 rounded-xl border border-blue-100 mt-4 md:mt-0">
+              <div className="flex gap-4 items-center bg-cyan-50 p-4 rounded-xl border border-blue-100 mt-4 md:mt-0">
                 <div className="text-center">
-                  <CheckCircle size={24} className="text-blue-600 mx-auto mb-2" />
-                  <div className="text-[10px] text-blue-700 font-bold tracking-wider">FIXED</div>
+                  <CheckCircle size={24} className="text-cyan-500 mx-auto mb-2" />
+                  <div className="text-[10px] text-cyan-500 font-bold tracking-wider">FIXED</div>
                 </div>
                 <img 
                   src={report.resolvedImage} 

@@ -7,7 +7,7 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const isActive = (path) => {
-    return location.pathname === path ? 'text-blue-600 bg-blue-50' : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50';
+    return location.pathname === path ? 'text-cyan-500 bg-cyan-50' : 'text-slate-600 hover:text-cyan-500 hover:bg-slate-50';
   };
 
   return (
@@ -20,13 +20,13 @@ function Navbar() {
             className="h-8 object-contain rounded" 
             onError={(e) => { e.target.style.display = 'none'; }}
           />
-          <span className="font-bold text-xl text-blue-800">CivicIssue</span>
+          <span className="font-bold text-xl text-slate-800">CivicIssue</span>
         </Link>
         <div className="flex items-center gap-2">
           <Link to="/map" className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition ${isActive('/map')}`}>
             <Map size={18} /> Map View
           </Link>
-          <Link to="/dashboard" className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-700 transition">
+          <Link to="/dashboard" className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-white bg-cyan-500 hover:bg-cyan-500 transition">
             <Camera size={18} /> Report Issue
           </Link>
 
@@ -36,7 +36,7 @@ function Navbar() {
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-slate-50 transition"
             >
-              <div className="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs">
+              <div className="w-6 h-6 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-xs">
                 S
               </div>
               <span className="text-sm font-bold text-slate-700">suhasgowda</span>
@@ -50,13 +50,13 @@ function Navbar() {
                   onClick={() => setDropdownOpen(false)}
                 ></div>
                 <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50">
-                  <Link to="/profile" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition">
+                  <Link to="/profile" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-cyan-500 transition">
                     <User size={16} /> Profile
                   </Link>
-                  <Link to="/leaderboard" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition">
+                  <Link to="/leaderboard" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-cyan-500 transition">
                     <Trophy size={16} /> Leaderboard
                   </Link>
-                  <Link to="/history" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition">
+                  <Link to="/history" onClick={() => setDropdownOpen(false)} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-cyan-500 transition">
                     <HistoryIcon size={16} /> My Issues
                   </Link>
                   <div className="h-px bg-slate-100 my-2"></div>

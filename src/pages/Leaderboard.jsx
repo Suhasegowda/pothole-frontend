@@ -22,8 +22,8 @@ function Leaderboard() {
   return (
     <div className="max-w-4xl mx-auto py-12">
       <div className="text-center mb-12">
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6">
-          <Trophy size={40} className="text-blue-600" />
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-100 rounded-full mb-6">
+          <Trophy size={40} className="text-cyan-500" />
         </div>
         <h1 className="text-4xl font-bold text-slate-800 mb-4">City Champions</h1>
         <p className="text-slate-500 max-w-xl mx-auto text-lg">
@@ -44,20 +44,20 @@ function Leaderboard() {
             <div 
               key={user.rank} 
               className={`grid grid-cols-[80px_1fr_120px_120px] px-8 py-6 items-center transition-colors hover:bg-slate-50 ${
-                user.name === 'You' ? 'bg-blue-50/50 relative overflow-hidden' : ''
+                user.name === 'You' ? 'bg-cyan-50/50 relative overflow-hidden' : ''
               }`}
             >
               {user.name === 'You' && (
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500"></div>
               )}
               <div className="flex items-center justify-center w-8">
                 {getRankIcon(user.rank)}
               </div>
-              <div className={`font-bold text-xl ${user.name === 'You' ? 'text-blue-700' : 'text-slate-800'}`}>
+              <div className={`font-bold text-xl ${user.name === 'You' ? 'text-cyan-500' : 'text-slate-800'}`}>
                 {user.name}
               </div>
               <div className="text-right text-slate-500 font-medium">{user.reports}</div>
-              <div className="text-right font-bold text-blue-600 text-xl">{user.points}</div>
+              <div className="text-right font-bold text-cyan-500 text-xl">{user.points}</div>
             </div>
           ))}
         </div>

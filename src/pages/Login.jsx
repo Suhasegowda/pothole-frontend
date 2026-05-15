@@ -107,7 +107,7 @@ function Login() {
                 <input type="checkbox" className="w-4 h-4" />
                 Remember me
               </label>
-              <a href="#" className="text-blue-600 hover:underline">
+              <a href="#" className="text-cyan-500 hover:underline">
                 Forgot Password?
               </a>
             </div>
@@ -145,7 +145,7 @@ function Login() {
           {/* Signup */}
           <p className="text-center text-gray-600 mt-8">
             Don't have an account?{' '}
-            <Link to="/signup" className="text-blue-600 font-bold hover:underline">
+            <Link to="/signup" className="text-cyan-500 font-bold hover:underline">
               Create Account
             </Link>
           </p>

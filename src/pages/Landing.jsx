@@ -12,22 +12,22 @@ function Landing() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
               <img src="/logo.jpeg" alt="CivicIssue" className="h-8 object-contain" onError={(e) => e.target.style.display='none'} />
-              <span className="font-bold text-xl text-blue-800">CivicIssue</span>
+              <span className="font-bold text-xl text-slate-800">CivicIssue</span>
             </div>
             <div className="hidden md:flex space-x-6 items-center text-sm font-medium">
-              <Link to="/map" className="text-gray-600 hover:text-blue-700 flex items-center gap-1">
+              <Link to="/map" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
                 Map View
               </Link>
-              <a href="#about" className="text-gray-600 hover:text-blue-700 flex items-center gap-1">
+              <a href="#about" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
                 About
               </a>
-              <a href="#faqs" className="text-gray-600 hover:text-blue-700 flex items-center gap-1">
+              <a href="#faqs" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
                 FAQs
               </a>
-              <a href="#blog" className="text-gray-600 hover:text-blue-700 flex items-center gap-1">
+              <a href="#blog" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
                 Blog
               </a>
-              <a href="#cities" className="text-blue-600 hover:text-blue-700 flex items-center gap-1 font-bold">
+              <a href="#cities" className="text-cyan-500 hover:text-cyan-500 flex items-center gap-1 font-bold">
                 Top Cities
               </a>
               <Link to="/login" className="border border-gray-300 text-gray-700 px-4 py-1.5 rounded-md hover:bg-gray-50 transition flex items-center gap-1">
@@ -41,17 +41,17 @@ function Landing() {
       {/* Hero Section */}
       <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/2">
-          <h1 className="text-5xl md:text-6xl font-bold text-blue-800 mb-6 leading-tight tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight tracking-tight">
             Report Civic<br/>Issues. Drive<br/>Change Together.
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
             Upload civic problems in your city, share with your community, and track resolutions with full transparency. Join thousands of Indians making their cities better.
           </p>
           <div className="flex gap-4">
-            <Link to="/login" className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-md">
+            <Link to="/login" className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition shadow-md">
               Report an Issue
             </Link>
-            <Link to="/map" className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-md">
+            <Link to="/map" className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition shadow-md">
               View Global Issue Map
             </Link>
           </div>
@@ -80,10 +80,10 @@ function Landing() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-20">
-            <span className="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-blue-200">
+            <span className="inline-block bg-cyan-50 text-cyan-500 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 border border-blue-200">
               ✓ Simple & Effective Process
             </span>
-            <h2 className="text-4xl font-bold text-blue-800 mb-4">How It Works</h2>
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">How It Works</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Our revolutionary 4-step process empowers every Indian citizen to drive meaningful change in their communities through transparency and collective action
             </p>
@@ -96,15 +96,15 @@ function Landing() {
             {/* Step 1 */}
             <div className="flex flex-col md:flex-row items-center gap-16 relative z-10">
               <div className="md:w-1/2 text-left md:text-right md:pr-12">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 text-blue-700 mb-4 md:ml-auto">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-cyan-100 text-cyan-500 mb-4 md:ml-auto">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-800 mb-3">Upload the Issue</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Upload the Issue</h3>
                 <p className="text-gray-600">Citizens report civic problems with detailed photos and precise location data, creating a comprehensive issue database.</p>
               </div>
               <div className="md:w-1/2 relative group">
-                <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">1</div>
-                <div className="bg-blue-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
+                <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">1</div>
+                <div className="bg-cyan-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
                    <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pothole illustration" className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </div>
@@ -113,15 +113,15 @@ function Landing() {
             {/* Step 2 (Formerly Step 3) */}
             <div className="flex flex-col md:flex-row-reverse items-center gap-16 relative z-10">
               <div className="md:w-1/2 text-left md:pl-12">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 text-blue-700 mb-4">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-cyan-100 text-cyan-500 mb-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-800 mb-3">Authority Action</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Authority Action</h3>
                 <p className="text-gray-600">Growing community pressure and transparent reporting compels local authorities to acknowledge and respond to urgent civic needs.</p>
               </div>
               <div className="md:w-1/2 relative group">
-                <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">2</div>
-                <div className="bg-blue-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
+                <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">2</div>
+                <div className="bg-cyan-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Authority workers illustration" className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </div>
@@ -130,15 +130,15 @@ function Landing() {
             {/* Step 3 (Formerly Step 4) */}
             <div className="flex flex-col md:flex-row items-center gap-16 relative z-10">
               <div className="md:w-1/2 text-left md:text-right md:pr-12">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 text-blue-700 mb-4 md:ml-auto">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-cyan-100 text-cyan-500 mb-4 md:ml-auto">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-800 mb-3">Resolved & Tracked</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Resolved & Tracked</h3>
                 <p className="text-gray-600">Issues are marked as resolved with before-and-after documentation, ensuring transparency and community satisfaction.</p>
               </div>
               <div className="md:w-1/2 relative group">
-                <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">3</div>
-                <div className="bg-blue-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
+                <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-20 hidden md:flex border-4 border-white shadow-sm">3</div>
+                <div className="bg-cyan-50 rounded-2xl p-4 shadow-sm border border-blue-100 overflow-hidden relative h-64 w-full cursor-pointer">
                    <img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clean street illustration" className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105" />
                 </div>
               </div>
@@ -151,7 +151,7 @@ function Landing() {
       {/* Recent Issues Section */}
       <div className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-blue-800 mb-2">Recent Issues</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-2">Recent Issues</h2>
           <p className="text-gray-500 mb-10">Stay updated with the latest civic issues reported by communities across India</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
@@ -239,7 +239,7 @@ function Landing() {
       </div>
 
       {/* Stats Section */}
-      <div className="py-16 bg-blue-50 border-y border-blue-100 mt-10">
+      <div className="py-16 bg-cyan-50 border-y border-blue-100 mt-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-blue-900 mb-8">Making Real Impact Across India</h2>
           
@@ -284,22 +284,22 @@ function Landing() {
           <div>
             <h4 className="font-bold text-sm text-gray-800 mb-4">Quick Links</h4>
             <ul className="space-y-3 text-xs text-gray-600">
-              <li><Link to="/" className="hover:text-blue-700">Home</Link></li>
-              <li><a href="#how-it-works" className="hover:text-blue-700">How It Works</a></li>
-              <li><Link to="/dashboard" className="hover:text-blue-700">View Map</Link></li>
-              <li><a href="#about" className="hover:text-blue-700">About</a></li>
-              <li><a href="#faqs" className="hover:text-blue-700">FAQ</a></li>
-              <li><a href="#blog" className="hover:text-blue-700">Blog</a></li>
-              <li><a href="http://t.me/civicissuereportingbot" className="hover:text-blue-700">Telegram Bot</a></li>
+              <li><Link to="/" className="hover:text-cyan-500">Home</Link></li>
+              <li><a href="#how-it-works" className="hover:text-cyan-500">How It Works</a></li>
+              <li><Link to="/dashboard" className="hover:text-cyan-500">View Map</Link></li>
+              <li><a href="#about" className="hover:text-cyan-500">About</a></li>
+              <li><a href="#faqs" className="hover:text-cyan-500">FAQ</a></li>
+              <li><a href="#blog" className="hover:text-cyan-500">Blog</a></li>
+              <li><a href="http://t.me/civicissuereportingbot" className="hover:text-cyan-500">Telegram Bot</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-sm text-gray-800 mb-4">Legal</h4>
             <ul className="space-y-3 text-xs text-gray-600">
-              <li><a href="#" className="hover:text-blue-700">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-700">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-blue-700">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-blue-700">Community Guidelines</a></li>
+              <li><a href="#" className="hover:text-cyan-500">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-cyan-500">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-cyan-500">Cookie Policy</a></li>
+              <li><a href="#" className="hover:text-cyan-500">Community Guidelines</a></li>
             </ul>
           </div>
         </div>

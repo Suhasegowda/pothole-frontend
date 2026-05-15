@@ -7,7 +7,7 @@ function Stats() {
       {/* Purple Banner */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 pt-16 pb-20 px-8 text-white">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div className="w-32 h-32 bg-white text-blue-600 rounded-full flex items-center justify-center text-6xl font-bold shadow-xl flex-shrink-0">
+          <div className="w-32 h-32 bg-white text-cyan-500 rounded-full flex items-center justify-center text-6xl font-bold shadow-xl flex-shrink-0">
             S
           </div>
           <div className="flex-1 text-center md:text-left mt-2">
@@ -70,7 +70,7 @@ function Stats() {
           {/* Achievements */}
           <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6 h-64 flex flex-col">
             <h3 className="flex items-center gap-2 text-lg font-bold text-slate-800 mb-auto">
-              <Trophy size={20} className="text-slate-400" /> Achievements <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full ml-1">0</span>
+              <Trophy size={20} className="text-slate-400" /> Achievements <span className="bg-cyan-500 text-white text-xs px-2 py-0.5 rounded-full ml-1">0</span>
             </h3>
             <div className="flex flex-col items-center justify-center text-center text-slate-400 pb-8">
               <Trophy size={40} className="mb-3 opacity-50" />
@@ -115,10 +115,10 @@ function Stats() {
 
         {/* Bottom Buttons */}
         <div className="flex justify-center gap-4">
-          <Link to="/leaderboard" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
+          <Link to="/leaderboard" className="bg-cyan-500 hover:bg-cyan-500 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
             <Trophy size={16} /> View Leaderboard
           </Link>
-          <Link to="/dashboard" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
+          <Link to="/dashboard" className="bg-cyan-500 hover:bg-cyan-500 text-white px-6 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition">
             <span className="text-lg leading-none">+</span> Report New Issue
           </Link>
         </div>
