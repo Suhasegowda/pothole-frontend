@@ -31,8 +31,8 @@ function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <img src="/logo.jpeg" alt="CivicIssue" className="h-8 object-contain" onError={(e) => e.target.style.display='none'} />
-              <span className="font-bold text-xl text-slate-800">CivicIssue</span>
+              <img src="/logo.png" alt="CivicLens" className="h-8 object-contain" onError={(e) => e.target.style.display='none'} />
+              <span className="font-bold text-xl text-slate-800">CivicLens</span>
             </div>
             <div className="hidden md:flex space-x-6 items-center text-sm font-medium">
               <Link to="/map" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
@@ -172,7 +172,7 @@ function Landing() {
       <div className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-slate-800 mb-2">Recent Issues</h2>
-          <p className="text-gray-500 mb-10">Stay updated with the latest civic issues reported by communities across India</p>
+          <p className="text-gray-500 mb-10">Stay updated with the latest CivicLenss reported by communities across India</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {/* Issue Card 1 */}
@@ -185,8 +185,7 @@ function Landing() {
                 <span>📍</span> MIDC, Maharashtra Industrial Development Corporation...
               </p>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">cvxnfn</p>
-              <div className="flex justify-between items-center text-xs text-gray-400">
-                <span className="flex items-center gap-1">👍 3 upvotes</span>
+              <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>4 weeks ago</span>
               </div>
             </div>
@@ -201,8 +200,7 @@ function Landing() {
                 <span>📍</span> Madhupura, Asarva Taluka, Ahmedabad, Gujarat...
               </p>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">there is a very big almost size of a truck tyre pothole in front of my house</p>
-              <div className="flex justify-between items-center text-xs text-gray-400">
-                <span className="flex items-center gap-1">👍 9 upvotes</span>
+              <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>5 weeks ago</span>
               </div>
             </div>
@@ -217,8 +215,7 @@ function Landing() {
                 <span>📍</span> Nathdwara, Nathdwara Tehsil, Rajsamand, Rajasthan...
               </p>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">bad road conditions in nathdwara</p>
-              <div className="flex justify-between items-center text-xs text-gray-400">
-                <span className="flex items-center gap-1">👍 1 upvotes</span>
+              <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>7 weeks ago</span>
               </div>
             </div>
@@ -233,8 +230,7 @@ function Landing() {
                 <span>📍</span> Green View Colony, Karaswada, Bardez, North Goa...
               </p>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">Pothole in roads</p>
-              <div className="flex justify-between items-center text-xs text-gray-400">
-                <span className="flex items-center gap-1">👍 3 upvotes</span>
+              <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>8 weeks ago</span>
               </div>
             </div>
@@ -249,8 +245,7 @@ function Landing() {
                 <span>📍</span> Ghatlodiya Taluka, Ahmedabad, Gujarat...
               </p>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">No Street Light Issue</p>
-              <div className="flex justify-between items-center text-xs text-gray-400">
-                <span className="flex items-center gap-1">👍 1 upvotes</span>
+              <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>13 weeks ago</span>
               </div>
             </div>
@@ -288,11 +283,11 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.jpeg" alt="CivicIssue" className="h-8" onError={(e) => e.target.style.display='none'} />
-              <span className="font-bold text-xl text-gray-800">CivicIssue</span>
+              <img src="/logo.png" alt="CivicLens" className="h-8" onError={(e) => e.target.style.display='none'} />
+              <span className="font-bold text-xl text-gray-800">CivicLens</span>
             </div>
             <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
-              Empowering Indian communities to create positive change through transparent civic issue reporting and collaborative problem-solving.
+              Empowering Indian communities to create positive change through transparent CivicLens reporting and collaborative problem-solving.
             </p>
             <div className="flex gap-4 mt-6">
               <div className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-400">in</div>
@@ -309,7 +304,7 @@ function Landing() {
               <li><a href="#about" className="hover:text-cyan-500">About</a></li>
               <li><a href="#faqs" className="hover:text-cyan-500">FAQ</a></li>
               <li><a href="#blog" className="hover:text-cyan-500">Blog</a></li>
-              <li><a href="http://t.me/civicissuereportingbot" className="hover:text-cyan-500">Telegram Bot</a></li>
+              <li><a href="http://t.me/CivicLensreportingbot" className="hover:text-cyan-500">Telegram Bot</a></li>
             </ul>
           </div>
           <div>

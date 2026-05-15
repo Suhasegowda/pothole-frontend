@@ -44,7 +44,7 @@ function Login() {
           {/* Illustration */}
           <div className="bg-white p-2 rounded-2xl shadow-xl mt-10 animate-bounce">
             <img
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="CivicLens AI"
               className="w-64 rounded-xl"
               onError={(e) => { e.target.style.display = 'none'; }}
