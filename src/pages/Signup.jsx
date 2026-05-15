@@ -33,7 +33,7 @@ function Signup() {
             <img 
               src="/logo.jpeg" 
               alt="Logo" 
-              className="h-16 w-16 object-cover rounded-full shadow-sm mx-auto" 
+              className="h-16 object-contain mx-auto" 
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </div>

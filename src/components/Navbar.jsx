@@ -17,7 +17,7 @@ function Navbar() {
           <img 
             src="/logo.jpeg" 
             alt="CivicLens AI Logo" 
-            className="h-9 w-9 object-cover rounded-full shadow-sm border border-slate-200" 
+            className="h-10 object-contain" 
             onError={(e) => { e.target.style.display = 'none'; }}
           />
           <span className="font-bold text-xl text-slate-800">CivicLens</span>

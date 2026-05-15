@@ -31,7 +31,7 @@ function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <img src="/logo.jpeg" alt="CivicLens" className="h-9 w-9 object-cover rounded-full shadow-sm border border-slate-200" onError={(e) => e.target.style.display='none'} />
+              <img src="/logo.jpeg" alt="CivicLens" className="h-10 object-contain" onError={(e) => e.target.style.display='none'} />
               <span className="font-bold text-xl text-slate-800">CivicLens</span>
             </div>
             <div className="hidden md:flex space-x-6 items-center text-sm font-medium">
@@ -277,7 +277,7 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.jpeg" alt="CivicLens" className="h-9 w-9 object-cover rounded-full shadow-sm border border-slate-200" onError={(e) => e.target.style.display='none'} />
+              <img src="/logo.jpeg" alt="CivicLens" className="h-10 object-contain" onError={(e) => e.target.style.display='none'} />
               <span className="font-bold text-xl text-gray-800">CivicLens</span>
             </div>
             <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
