@@ -31,9 +31,9 @@ function Signup() {
         <div className="text-center mb-8">
           <div className="bg-white p-2 rounded-xl inline-block mb-4 shadow-xl">
             <img 
-              src="/logo.png" 
+              src="/logo.jpeg" 
               alt="Logo" 
-              className="h-12 rounded-lg" 
+              className="h-16 w-16 object-cover rounded-full shadow-sm mx-auto" 
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </div>
