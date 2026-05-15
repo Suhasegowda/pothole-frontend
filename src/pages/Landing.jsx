@@ -32,6 +32,7 @@ function Landing() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-2">
               <img src="/logo_transparent.png" alt="CivicLens" className="h-16 w-auto object-contain" onError={(e) => e.target.style.display='none'} />
+              <span className="font-bold text-2xl text-sky-500">CivicLens</span>
             </div>
             <div className="hidden md:flex space-x-6 items-center text-sm font-medium">
               <Link to="/map" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
@@ -277,6 +278,7 @@ function Landing() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img src="/logo_transparent.png" alt="CivicLens" className="h-16 w-auto object-contain" onError={(e) => e.target.style.display='none'} />
+              <span className="font-bold text-2xl text-sky-500">CivicLens</span>
             </div>
             <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
               Empowering Indian communities to create positive change through transparent CivicLens reporting and collaborative problem-solving.

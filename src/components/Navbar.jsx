@@ -20,6 +20,7 @@ function Navbar() {
             className="h-16 w-auto object-contain" 
             onError={(e) => { e.target.style.display = 'none'; }}
           />
+          <span className="font-bold text-2xl text-sky-500">CivicLens</span>
         </Link>
         <div className="flex items-center gap-2">
           <Link to="/map" className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition ${isActive('/map')}`}>
