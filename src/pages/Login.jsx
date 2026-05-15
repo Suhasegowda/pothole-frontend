@@ -121,26 +121,7 @@ function Login() {
             </button>
           </form>
 
-          {/* Divider */}
-          <div className="flex items-center my-8">
-            <hr className="flex-grow border-gray-300" />
-            <span className="px-3 text-gray-400 text-sm">
-              OR
-            </span>
-            <hr className="flex-grow border-gray-300" />
-          </div>
 
-          {/* Social Login */}
-          <button
-            className="w-full border border-gray-300 py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-gray-100 transition text-slate-800 font-medium"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
-              width="22"
-              alt="Google"
-            />
-            Continue with Google
-          </button>
 
           {/* Signup */}
           <p className="text-center text-gray-600 mt-8">
