@@ -82,7 +82,7 @@ function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="input-box w-full px-5 py-4 rounded-xl border border-gray-300 outline-none text-slate-800 bg-white"
+                className="input-box w-full px-5 py-4 rounded-xl border border-sky-200 outline-none text-slate-800 bg-sky-50"
               />
             </div>
 
@@ -97,7 +97,7 @@ function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
-                className="input-box w-full px-5 py-4 rounded-xl border border-gray-300 outline-none text-slate-800 bg-white"
+                className="input-box w-full px-5 py-4 rounded-xl border border-sky-200 outline-none text-slate-800 bg-sky-50"
               />
             </div>
 
