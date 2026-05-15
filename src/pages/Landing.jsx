@@ -44,12 +44,6 @@ function Landing() {
               <a href="#faqs" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
                 FAQs
               </a>
-              <a href="#blog" className="text-gray-600 hover:text-cyan-500 flex items-center gap-1">
-                Blog
-              </a>
-              <a href="#cities" className="text-cyan-500 hover:text-cyan-500 flex items-center gap-1 font-bold">
-                Top Cities
-              </a>
               <Link to="/login" className="border border-gray-300 text-gray-700 px-4 py-1.5 rounded-md hover:bg-gray-50 transition flex items-center gap-1">
                 Sign In
               </Link>
@@ -303,7 +297,6 @@ function Landing() {
               <li><Link to="/dashboard" className="hover:text-cyan-500">View Map</Link></li>
               <li><a href="#about" className="hover:text-cyan-500">About</a></li>
               <li><a href="#faqs" className="hover:text-cyan-500">FAQ</a></li>
-              <li><a href="#blog" className="hover:text-cyan-500">Blog</a></li>
               <li><a href="http://t.me/CivicLensreportingbot" className="hover:text-cyan-500">Telegram Bot</a></li>
             </ul>
           </div>
