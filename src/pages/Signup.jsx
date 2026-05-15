@@ -58,7 +58,7 @@ function Signup() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter your name"
-              className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
+              className="input-box w-full px-5 py-4 rounded-xl bg-white border border-white/30 outline-none placeholder:text-gray-400 text-slate-800"
             />
           </div>
 
@@ -73,7 +73,7 @@ function Signup() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
+              className="input-box w-full px-5 py-4 rounded-xl bg-white border border-white/30 outline-none placeholder:text-gray-400 text-slate-800"
             />
           </div>
 
@@ -88,7 +88,7 @@ function Signup() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Create password"
-              className="input-box w-full px-5 py-4 rounded-xl bg-white/20 border border-white/30 outline-none placeholder:text-gray-200 text-white"
+              className="input-box w-full px-5 py-4 rounded-xl bg-white border border-white/30 outline-none placeholder:text-gray-400 text-slate-800"
             />
           </div>
 
