@@ -1,14 +1,21 @@
 import { Trophy, Medal, Award } from 'lucide-react';
 
 function Leaderboard() {
-  const users = [
-    { rank: 1, name: 'Rahul S.', points: 1250, reports: 125 },
-    { rank: 2, name: 'Priya K.', points: 980, reports: 98 },
-    { rank: 3, name: 'Anand V.', points: 850, reports: 85 },
-    { rank: 4, name: 'Deepa M.', points: 720, reports: 72 },
-    { rank: 5, name: 'You', points: 450, reports: 45 },
-    { rank: 6, name: 'Karthik R.', points: 310, reports: 31 },
+  const userReports = parseInt(localStorage.getItem('issuesCount') || '0', 10);
+  const userPoints = userReports * 10;
+  
+  let users = [
+    { name: 'Rahul S.', points: 1250, reports: 125 },
+    { name: 'Priya K.', points: 980, reports: 98 },
+    { name: 'Anand V.', points: 850, reports: 85 },
+    { name: 'Deepa M.', points: 720, reports: 72 },
+    { name: 'You', points: userPoints > 0 ? userPoints : 450, reports: userReports > 0 ? userReports : 45 },
+    { name: 'Karthik R.', points: 310, reports: 31 },
   ];
+  
+  // Sort by points to make the rank truly dynamic
+  users.sort((a, b) => b.points - a.points);
+  users = users.map((u, index) => ({ ...u, rank: index + 1 }));
 
   const getRankIcon = (rank) => {
     switch(rank) {

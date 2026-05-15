@@ -1,8 +1,28 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Map, { Marker } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function Landing() {
+  const [dynamicStats, setDynamicStats] = useState({
+    reported: 5,
+    resolved: 2,
+    rate: 40,
+    time: 2
+  });
+
+  useEffect(() => {
+    // Add user's reported issues to the global base count
+    const userIssues = parseInt(localStorage.getItem('issuesCount') || '0', 10);
+    if (userIssues > 0) {
+      setDynamicStats(prev => ({
+        ...prev,
+        reported: 5 + userIssues,
+        resolved: 2 + Math.floor(userIssues / 2),
+        rate: Math.min(100, Math.floor(((2 + Math.floor(userIssues / 2)) / (5 + userIssues)) * 100))
+      }));
+    }
+  }, []);
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans">
       
@@ -241,23 +261,22 @@ function Landing() {
       {/* Stats Section */}
       <div className="py-16 bg-cyan-50 border-y border-blue-100 mt-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-blue-900 mb-8">Making Real Impact Across India</h2>
-          
+          <h2 className="text-2xl font-bold text-blue-900 mb-8">Making Real Impact</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">5</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
+              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.reported}</div>
               <div className="text-xs text-gray-500 font-medium">Issues Reported</div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">0</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
+              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.resolved}</div>
               <div className="text-xs text-gray-500 font-medium">Issues Resolved</div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">0</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
+              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.rate}</div>
               <div className="text-xs text-gray-500 font-medium">Resolution Rate (%)</div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">0</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
+              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.time}</div>
               <div className="text-xs text-gray-500 font-medium">Avg Response Time (days)</div>
             </div>
           </div>

@@ -36,10 +36,22 @@ function Navbar() {
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-slate-50 transition"
             >
-              <div className="w-6 h-6 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-xs">
-                S
+              <div className="w-6 h-6 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-xs overflow-hidden">
+                {localStorage.getItem('userAvatar') ? (
+                  <img src={localStorage.getItem('userAvatar')} alt="Profile" className="w-full h-full object-cover" />
+                ) : (
+                  <span>
+                    {localStorage.getItem('civiclens_user') 
+                      ? (JSON.parse(localStorage.getItem('civiclens_user')).firstName?.[0] || JSON.parse(localStorage.getItem('civiclens_user')).name?.[0] || 'U').toUpperCase() 
+                      : 'U'}
+                  </span>
+                )}
               </div>
-              <span className="text-sm font-bold text-slate-700">suhasgowda</span>
+              <span className="text-sm font-bold text-slate-700">
+                {localStorage.getItem('civiclens_user') 
+                  ? (JSON.parse(localStorage.getItem('civiclens_user')).firstName || JSON.parse(localStorage.getItem('civiclens_user')).name || 'User').split(' ')[0]
+                  : 'User'}
+              </span>
               <ChevronDown size={14} className="text-slate-500" />
             </button>
 
