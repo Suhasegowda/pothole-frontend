@@ -15,7 +15,7 @@ function Navbar() {
       <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/logo.jpeg" 
+            src="/logo_transparent.png" 
             alt="CivicLens AI Logo" 
             className="h-10 object-contain" 
             onError={(e) => { e.target.style.display = 'none'; }}
