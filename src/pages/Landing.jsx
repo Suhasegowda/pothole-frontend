@@ -4,25 +4,6 @@ import Map, { Marker } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function Landing() {
-  const [dynamicStats, setDynamicStats] = useState({
-    reported: 5,
-    resolved: 2,
-    rate: 40,
-    time: 2
-  });
-
-  useEffect(() => {
-    // Add user's reported issues to the global base count
-    const userIssues = parseInt(localStorage.getItem('issuesCount') || '0', 10);
-    if (userIssues > 0) {
-      setDynamicStats(prev => ({
-        ...prev,
-        reported: 5 + userIssues,
-        resolved: 2 + Math.floor(userIssues / 2),
-        rate: Math.min(100, Math.floor(((2 + Math.floor(userIssues / 2)) / (5 + userIssues)) * 100))
-      }));
-    }
-  }, []);
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans">
       
@@ -175,91 +156,6 @@ function Landing() {
         </div>
       </div>
 
-      {/* Recent Issues Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-800 mb-2">Recent Issues</h2>
-          <p className="text-gray-500 mb-10">Stay updated with the latest CivicLenss reported by communities across India</p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-            {/* Issue Card 1 */}
-            <div className="border border-blue-200 rounded-xl p-5 hover:shadow-md transition bg-white">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-800">jkxg</h3>
-                <span className="bg-red-50 text-red-500 text-xs px-2 py-1 rounded border border-red-100">pending</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
-                <span>📍</span> MIDC, Maharashtra Industrial Development Corporation...
-              </p>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">cvxnfn</p>
-              <div className="flex justify-end items-center text-xs text-gray-400">
-                <span>4 weeks ago</span>
-              </div>
-            </div>
-
-            {/* Issue Card 2 */}
-            <div className="border border-blue-200 rounded-xl p-5 hover:shadow-md transition bg-white">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-800">pothole in front of my house</h3>
-                <span className="bg-red-50 text-red-500 text-xs px-2 py-1 rounded border border-red-100">pending</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
-                <span>📍</span> Madhupura, Asarva Taluka, Ahmedabad, Gujarat...
-              </p>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">there is a very big almost size of a truck tyre pothole in front of my house</p>
-              <div className="flex justify-end items-center text-xs text-gray-400">
-                <span>5 weeks ago</span>
-              </div>
-            </div>
-
-            {/* Issue Card 3 */}
-            <div className="border border-blue-200 rounded-xl p-5 hover:shadow-md transition bg-white">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-800">bad road conditions</h3>
-                <span className="bg-red-50 text-red-500 text-xs px-2 py-1 rounded border border-red-100">pending</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
-                <span>📍</span> Nathdwara, Nathdwara Tehsil, Rajsamand, Rajasthan...
-              </p>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">bad road conditions in nathdwara</p>
-              <div className="flex justify-end items-center text-xs text-gray-400">
-                <span>7 weeks ago</span>
-              </div>
-            </div>
-
-            {/* Issue Card 4 */}
-            <div className="border border-blue-200 rounded-xl p-5 hover:shadow-md transition bg-white">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-800">Accidents</h3>
-                <span className="bg-red-50 text-red-500 text-xs px-2 py-1 rounded border border-red-100">pending</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
-                <span>📍</span> Green View Colony, Karaswada, Bardez, North Goa...
-              </p>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">Pothole in roads</p>
-              <div className="flex justify-end items-center text-xs text-gray-400">
-                <span>8 weeks ago</span>
-              </div>
-            </div>
-
-            {/* Issue Card 5 */}
-            <div className="border border-blue-200 rounded-xl p-5 hover:shadow-md transition bg-white">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-gray-800">No Street Light Issue</h3>
-                <span className="bg-red-50 text-red-500 text-xs px-2 py-1 rounded border border-red-100">pending</span>
-              </div>
-              <p className="text-xs text-gray-500 mb-3 flex items-start gap-1">
-                <span>📍</span> Ghatlodiya Taluka, Ahmedabad, Gujarat...
-              </p>
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">No Street Light Issue</p>
-              <div className="flex justify-end items-center text-xs text-gray-400">
-                <span>13 weeks ago</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* FAQs Section */}
       <div id="faqs" className="py-20 bg-white border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,31 +172,6 @@ function Landing() {
             <div className="border border-blue-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
               <h3 className="font-bold text-lg text-slate-800 mb-2">Is the platform free to use?</h3>
               <p className="text-gray-600">Yes! CivicLens is 100% free for all citizens. Our goal is to empower communities to improve their cities without any barriers.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="py-16 bg-cyan-50 border-y border-blue-100 mt-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-blue-900 mb-8">Making Real Impact</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.reported}</div>
-              <div className="text-xs text-gray-500 font-medium">Issues Reported</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.resolved}</div>
-              <div className="text-xs text-gray-500 font-medium">Issues Resolved</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.rate}</div>
-              <div className="text-xs text-gray-500 font-medium">Resolution Rate (%)</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-cyan-100 flex flex-col justify-center">
-              <div className="text-4xl font-bold text-gray-800 mb-1">{dynamicStats.time}</div>
-              <div className="text-xs text-gray-500 font-medium">Avg Response Time (days)</div>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ function Dashboard() {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [category, setCategory] = useState('');
+  const [remarks, setRemarks] = useState('');
   const [otherDescription, setOtherDescription] = useState('');
   const [scanning, setScanning] = useState(false);
   const [scanResult, setScanResult] = useState(null);
@@ -117,6 +118,7 @@ function Dashboard() {
     setFile(null);
     setPreview(null);
     setCategory('');
+    setRemarks('');
     setOtherDescription('');
     setScanResult(null);
   };
@@ -228,6 +230,17 @@ function Dashboard() {
                 <option value="manhole">Open Manhole</option>
                 <option value="others">Others</option>
               </select>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-bold text-slate-700 mb-2">Remarks</label>
+              <textarea 
+                rows="3" 
+                value={remarks} 
+                onChange={(e) => setRemarks(e.target.value)}
+                placeholder="Add any additional details or context..."
+                className="w-full bg-slate-50 border border-slate-300 text-slate-800 px-4 py-3 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+              />
             </div>
 
             {category === 'others' && (
