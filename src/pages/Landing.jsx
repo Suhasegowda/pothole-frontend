@@ -89,6 +89,19 @@ function Landing() {
         </div>
       </div>
 
+      {/* About Section */}
+      <div id="about" className="py-20 bg-slate-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-800 mb-6">About CivicLens</h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            The primary reason we built CivicLens is to solve critical civic problems affecting our daily lives, such as dangerous potholes, open manholes, uncollected garbage, and broken streetlights. 
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            By giving citizens a unified platform to report these issues directly to local authorities with precise location data and photographic evidence, we aim to drive faster resolutions, build community awareness, and create a safer, cleaner environment for everyone.
+          </p>
+        </div>
+      </div>
+
       {/* How It Works Section */}
       <div id="how-it-works" className="py-24 bg-white relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,6 +255,27 @@ function Landing() {
               <div className="flex justify-end items-center text-xs text-gray-400">
                 <span>13 weeks ago</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQs Section */}
+      <div id="faqs" className="py-20 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="border border-blue-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-bold text-lg text-slate-800 mb-2">What kind of civic problems can I report?</h3>
+              <p className="text-gray-600">You can report any civic issue that requires authority attention, including potholes, open manholes, garbage dumps, broken streetlights, water logging, and damaged public property.</p>
+            </div>
+            <div className="border border-blue-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-bold text-lg text-slate-800 mb-2">How does CivicLens help solve these problems?</h3>
+              <p className="text-gray-600">When you upload a photo, our system categorizes the issue and logs its exact GPS coordinates. This public tracking creates transparency and community visibility, helping authorities prioritize and fix the most urgent problems.</p>
+            </div>
+            <div className="border border-blue-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+              <h3 className="font-bold text-lg text-slate-800 mb-2">Is the platform free to use?</h3>
+              <p className="text-gray-600">Yes! CivicLens is 100% free for all citizens. Our goal is to empower communities to improve their cities without any barriers.</p>
             </div>
           </div>
         </div>
